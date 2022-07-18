@@ -100,7 +100,6 @@ footer {
 hr {
   opacity: 0.4;
 }
-
 .hystmodal {
   position: fixed;
   top: 0;
@@ -108,11 +107,9 @@ hr {
   right: 0;
   left: 0;
   background-color: rgb(0, 0, 0, 0.4);
-  z-index: 1;
-  display: flex;
-  visibility: collapse;
+  display: none;
 }
-.hystmodal__close{
+.hystmodal__close {
   float: right;
   cursor: pointer;
   margin-top: 18px;
@@ -120,80 +117,80 @@ hr {
 .hystmodal__window {
   width: 600px;
   max-width: 100%;
-  background-color: #FFF;
+  background-color: #fff;
   margin: auto;
+  margin-top: auto;
 }
-.hystmodal__container{
+.hystmodal__container {
   margin-left: 18px;
   margin-right: 18px;
 }
-.modal-nav{
+.modal-nav {
   display: flex;
   align-items: center;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.modal-nav > h4, .modal-nav > div{
+.modal-nav > h4,
+.modal-nav > div {
   margin-right: 10px;
 }
-.nav-button{
+.nav-button {
   border: none;
-  background-color: #FFF;
+  background-color: #fff;
   cursor: pointer;
   padding: 0;
 }
-.nav-button:hover{
+.nav-button:hover {
   color: red;
   text-decoration: underline;
 }
-.modal-login{
+.modal-login {
   display: flex;
   margin-bottom: 30px;
 }
-input{
+input {
   outline: none;
 }
-.email{
+.email {
   display: flex;
   width: 30%;
   margin-right: 10px;
   flex-direction: column;
 }
-.login{
+.login {
   display: flex;
   flex-direction: column;
   margin-right: 10px;
   display: none;
 }
-label{
+label {
   font-size: 13px;
   margin-bottom: 5px;
 }
-.password{
+.password {
   display: flex;
   width: 50%;
   flex-direction: column;
   margin-right: 10px;
 }
-.modal-button{
+.modal-button {
   cursor: pointer;
   margin-bottom: 40px;
   padding: 5px 25px;
   background-color: rgb(1, 177, 1);
-  color: #FFF;
+  color: #fff;
   border: none;
   border-radius: 15px;
   font-weight: 600;
 }
-label > a{
+label > a {
   color: blueviolet;
 }
-.check{
+.check {
   margin-bottom: 15px;
   display: none;
 }
-
-
 
 .footer_content {
   padding-top: 32px;

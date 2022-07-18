@@ -1,41 +1,38 @@
 //Показ Модал окна
-let btn = document.getElementById("Enter");
-let modal = document.getElementById("modal");
-btn.addEventListener("click", function () {
-  modal.style.visibility = "visible";
+$("#Enter").on("click", function () {
+  $("#modal").css("display", "flex");
 });
-let modal_btn = document.getElementById("close");
-modal_btn.addEventListener("click", function () {
-  modal.style.visibility = "hidden";
-  document.getElementById("one").checked = 0;
+$("#close").on("click", function () {
+  $("#modal").hide();
+  $("#one")[0].checked = 0;
 });
 
 //Смена содержимого окна при выборе регистрации
-let register = document.getElementById("nav-btn");
-register.addEventListener("click", function () {
-  if (register.innerHTML === "Регистрация") {
-    register.innerHTML = "Вход";
-    document.getElementById("nav-text").innerHTML = "Регистрация";
-    document.getElementById("login").style.display = "flex";
-    document.getElementById("mod-btn").innerHTML = "Зарегестрироватся";
-    document.getElementById("check").style.display = "block";
-  } else if (register.innerHTML === "Вход") {
-    register.innerHTML = "Регистрация";
-    document.getElementById("nav-text").innerHTML = "Вход";
-    document.getElementById("login").style.display = "none";
-    document.getElementById("mod-btn").innerHTML = "Войти";
-    document.getElementById("check").style.display = "none";
-    document.getElementById("one").checked = 0;
+let register = $("#nav-btn");
+register.on("click", function () {
+  if (register.html() === "Регистрация") {
+    register.html("Вход");
+    $("#nav-text").html("Регистрация");
+    $("#login").css("display", "flex");
+    $("#mod-btn").html("Зарегестрироватся");
+    $("#check").show();
+  } else if (register.html() === "Вход") {
+    register.html("Регистрация");
+    $("#nav-text").html("Вход");
+    $("#login").hide();
+    $("#mod-btn").html("Войти");
+    $("#check").hide();
+    $("#one")[0].checked = 0;
   }
 });
 
 //Выведение алерта при нажатии войти/зарегестрироватся
-document.getElementById("mod-btn").addEventListener("click", function () {
-  if (document.getElementById("nav-text").innerHTML === "Регистрация" && document.getElementById("one").checked) {
+$("#mod-btn").on("click", function () {
+  if ($("#nav-text").html() === "Регистрация" && $("#one")[0].checked) {
     alert("Вы зарегестрировались!");
-  } else if(document.getElementById("nav-text").innerHTML === "Регистрация"){
+  } else if ($("#nav-text").html() === "Регистрация") {
     alert("Подтвердите согласие");
-  }else if (document.getElementById("nav-text").innerHTML === "Вход") {
-    alert("Вошли!");
+  } else if ($("#nav-text").html() === "Вход") {
+    alert("Вы вошли!");
   }
 });
